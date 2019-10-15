@@ -10,11 +10,10 @@ public class RoverManager {
 
     public void init(){
         String PATH = "src/main/files/rover.txt";
-        BufferedReader bReader = null;
+        BufferedReader bReader;
 
         try{
             bReader = new BufferedReader(new FileReader(PATH));
-            String strCurrentLine;
 
             String [] coordinate = bReader.readLine().split(" ");
             int x = Integer.parseInt(coordinate[0]) + 1;
